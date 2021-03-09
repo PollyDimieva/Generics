@@ -13,7 +13,7 @@ public class TestGenericStack2 {
 		for(int i=0;i<5;i++) {
 			stack1.push(sc.nextLine());
 		}
-		for(int i=0;i<5;i++) {
+		while(stack1.isEmpty()==false) {
 			System.out.println(stack1.pop());
 		}
 	}
