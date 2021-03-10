@@ -1,7 +1,8 @@
 package generics;
 
+import java.util.ArrayList;
 
-public class GenericSort  {
+public class GenericSort2  {
 	public static void main(String[] args) {
 	
 		
@@ -28,23 +29,22 @@ public class GenericSort  {
 		System.out.print("Sorted String objects: ");
 		printList(stringArray);
 		
-		GeometricObject [] geometricObj = { new Circle(4), new Rectangle(5,7), new Rectangle(4,3)};
+		GeometricObject [] geometricObj = {new Circle(4), new Rectangle(5,7), new Rectangle(4,3)};
 		sort(geometricObj);
 		printList(geometricObj);
 	}
 
 	/** Sort an array of comparable objects */
 	public static <E extends Comparable<E>> void sort(E[] list) {
-		E currentMin; //sled kompilaciq generic tipovete E se iztrivat i se zamenqt ili s referencii ot klasa Object
-		              //ili ako nasledqva interface ili klas se zamenqt s tehni referencii
-		
+		E currentMin; 
 		int currentMinIndex;
 
 		for (int i = 0; i < list.length - 1; i++) {
+
 			currentMin = list[i];
 			currentMinIndex = i;
 			for (int j = i + 1; j < list.length; j++) {
-				if (currentMin.compareTo(list[j]) > 0) { //compareTo() e chast ot interface-a Comparable
+				if (currentMin.compareTo(list[j]) > 0) { 
 					currentMin = list[j];
 					currentMinIndex = j;
 				}
@@ -63,10 +63,54 @@ public class GenericSort  {
 			System.out.println(list[i] + " ");
 		System.out.println();
 	}
+	public static <E> void shuffle(ArrayList<E> list) {
+		for(int i=0;i<list.size();i++) {
+			int range = list.size();
+			int randomIndex=(int)(Math.random() * range);
+			E temp = list.get(i);
+			list.set(i, list.get(randomIndex));
+			list.set(randomIndex, temp);
+		}
+	}
+	public static <E extends Comparable<E>> void sort(ArrayList<E> list) {
+		E currentMin; 
+           int currentMinIndex;
 
-	
-
-	
+           for (int i = 0; i < list.size() - 1; i++) {
+         
+           currentMin = list.get(i);
+           currentMinIndex = i;
+           for (int j = i + 1; j < list.size(); j++) {
+	         if (currentMin.compareTo(list.get(j)) > 0) { 
+		        currentMin = list.get(j);
+		        currentMinIndex = j;
+	}
 }
+
+      
+            if (currentMinIndex != i) {
+	             list.set(currentMinIndex,list.get(i));
+	             list.set(i,currentMin);
+}
+}
+	}
+	public static <E extends Comparable<E>> E min(ArrayList<E> list) {
+		E currentMin = list.get(0); 
+         
+           for (int i = 0; i < list.size() - 1; i++) {
+           currentMin = list.get(i);
+          
+	         if (currentMin.compareTo(list.get(i)) > 0) { 
+		        currentMin = list.get(i);
+		        
+	       } 
+        }
+		return currentMin;
+	}
+}
+
+	
+
+	
 
 

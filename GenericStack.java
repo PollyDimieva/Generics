@@ -21,13 +21,14 @@ public class GenericStack<E> {
 		if(size>=list.length) {
 			doubleList();
 		}else {
+			
 			list[size++]= o;
 		}
 	}
 
 	public E pop() {
-		E o = list[--size];
-		
+		E o = list[size];
+		size--;
 		return o;
 	}
 

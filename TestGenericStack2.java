@@ -14,8 +14,10 @@ public class TestGenericStack2 {
 			stack1.push(sc.nextLine());
 		}
 		while(stack1.isEmpty()==false) {
+		
 			System.out.println(stack1.pop());
 		}
 	}
+	
 
 }

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 	    public T pop() {
 	        return remove(size() - 1);
+	       
 	    }
 
 	    public boolean isEmpty() {
@@ -20,8 +21,8 @@ import java.util.ArrayList;
 	    public T peek() {
 	        return get(size() - 1);
 	    }
-		
+	    
 	    public String toString() {
-	        return "stack: " + super.toString();
+	    	return "stack: " + super.toString();
 	    }
 	}
