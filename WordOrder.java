@@ -19,8 +19,9 @@ public class WordOrder {
     	  Scanner myReader =new Scanner(myObject);
     	  while(myReader.hasNext()==true) {
     		  String text = myReader.nextLine();
-    		  String lineWords[]= text.split(" ");
-    		  words.addAll(Arrays.asList(lineWords));
+    		  String lineWords[]= text.split("[\\s.,]+");   //Stringa se razdelq na negovite speisove, zapetaiki ili tochki
+    		                                                //razdelq dumite i gi slaga v masiv
+    		  words.addAll(Arrays.asList(lineWords));       //prevrushtam gi ot masiv v arraylist
     		//  System.out.println(text);
     	  }
       }catch(FileNotFoundException e) {

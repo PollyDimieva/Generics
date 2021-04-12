@@ -23,7 +23,7 @@ public class PerformanceTest {
    	  b=list.get(i);
    	  
      }
-     System.out.println(b);
+     System.out.println(b); //poveche ot chas
      
 	}
 

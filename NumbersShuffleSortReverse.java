@@ -20,7 +20,7 @@ public class NumbersShuffleSortReverse {
 	public static void main(String[] args) {
 	//	Scanner sc = new Scanner(System.in);
 		LinkedList<Integer> numbers = new LinkedList<>();
-		System.out.println("Enter the numbers: ");
+	//	System.out.println("Enter the numbers: ");
 		
 //		for(int i=0;i<5;i++) {
 //			Integer num = sc.nextInt();
@@ -48,7 +48,7 @@ public class NumbersShuffleSortReverse {
 		
 		JTextArea txtArea = new JTextArea();
 		JTextField txtField = new JTextField();
-		txtField.addActionListener(new ActionListener(){
+		txtField.addActionListener(new ActionListener(){           //detects enter button
 
 		                public void actionPerformed(ActionEvent e){
 
@@ -92,7 +92,7 @@ public class NumbersShuffleSortReverse {
         JButton jbtReverse = new JButton("Reverse");
         jbtReverse.addActionListener(new ActionListener(){   
         	public void actionPerformed(ActionEvent e){  
-        		Collections.sort(numbers, Collections.reverseOrder());
+        		Collections.sort(numbers, Collections.reverseOrder()); //s comparatora reverseOrder()
         		txtArea.setText(numbers.toString());
 	    	}  
 	    }); 
