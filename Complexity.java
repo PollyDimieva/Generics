@@ -56,13 +56,13 @@ public static boolean hasPair_BruteForce(int[] list,int sum) { // O(n^2)
          }return false;
 }
 
-        public static boolean hasPair_HashSet(int[]list, int sum) {
+        public static boolean hasPair_HashSet(int[]list, int sum) { //O(n)
         	Set<Integer> rests = new HashSet<Integer>();
         	for(int i=0;i<list.length;i++) {
-        		if(rests.contains(list[i])) {
+        		if(rests.contains(list[i])) { //0(1) !
         			return true;
         		}
-        		rests.add(sum-list[i]);
+        		rests.add(sum-list[i]); 
         		}
         	return false;
         }
