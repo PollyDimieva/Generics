@@ -1,6 +1,6 @@
 package project;
 
-public class ParkingSpace implements Comparable {
+public class ParkingSpace  {
  
 	private int number;
 	private int area;
@@ -40,42 +40,8 @@ public class ParkingSpace implements Comparable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int compareNumbers(ParkingSpace ps) {
-		// TODO Auto-generated method stub
-		if(ps.getNumber()>this.getNumber()){
-			return -1;
-		}else if(this.getNumber()>ps.getNumber()){
-			return 1;
-		}else{
-		return 0;
-		}
-	}
-	public int compareUserNames(ParkingSpace ps) {
-		// TODO Auto-generated method stub
-		if(ps.getUserName().compareTo(this.getUserName())<0){
-			return -1;
-		}
-		else if(ps.getUserName().compareTo(this.getUserName())>0){
-			return 1;
-		}
-		else{
-			return 0;
-		}
 	
-	}
-	public int compareAreas(ParkingSpace ps) {
-		// TODO Auto-generated method stub
-		if(ps.getArea()>this.getArea()){
-			return -1;
-		}else if(this.getArea()>ps.getArea()){
-			return 1;
-		}else{
-		return 0;
-		}
-	}
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-    
+//    public String to(){
+//    	return 
+//    }
 }
